@@ -11,14 +11,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:autofillHints=""
         android:ems="10"
         android:focusable="false"
         android:focusableInTouchMode="false"
+        android:hint=""
         android:inputType="numberSigned|numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/newNumber_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint=""
+        android:inputType="numberSigned|numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result_et"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/operation_tv"
@@ -31,18 +49,6 @@
         app:layout_constraintBaseline_toBaselineOf="@id/newNumber_et"
         app:layout_constraintEnd_toStartOf="@+id/newNumber_et"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/newNumber_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result_et" />
 
     <Button
         android:id="@+id/button_zero"
