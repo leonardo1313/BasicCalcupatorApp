@@ -11,11 +11,10 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var resultEt: EditText
     private lateinit var newNumberEt: EditText
-    private val displayOperationTv by lazy (LazyThreadSafetyMode.NONE){ findViewById<TextView>(R.id.operation_tv) }
+    private val displayOperationTv by lazy(LazyThreadSafetyMode.NONE) { findViewById<TextView>(R.id.operation_tv) }
 
     // Variables to hold the operands and type of calculation
     private var operand1: Double? = null
-    private var operand2: Double = 0.0
     private var pendingOperation = "="
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,10 +63,14 @@ class MainActivity : AppCompatActivity() {
 
         val operationListener = View.OnClickListener { view ->
             val operation = (view as Button).text.toString()
-            val value = newNumberEt.text.toString()
-            if(value.isNotEmpty()) {
+            try {
+                val value = newNumberEt.text.toString().toDouble()
                 performOperation(value, operation)
+            } catch (e: NumberFormatException) {
+                newNumberEt.setText("")
             }
+
+
             pendingOperation = operation
             displayOperationTv.text = pendingOperation
         }
@@ -80,7 +83,28 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun performOperation(value: String, operation: String) {
-        displayOperationTv.text = operation
+    private fun performOperation(value: Double, operation: String) {
+        if (operand1 == null) {
+            operand1 = value
+        } else {
+
+            if (pendingOperation == "=") {
+                pendingOperation = operation
+            }
+
+            when (pendingOperation) {
+                "=" -> operand1 = value
+                "/" -> operand1 = if (value == 0.0) {
+                    Double.NaN // Handle attempt of dividing with 0
+                } else {
+                    operand1!! / value
+                }
+                "*" -> operand1 = operand1!! * value
+                "-" -> operand1 = operand1!! - value
+                "+" -> operand1 = operand1!! + value
+            }
+        }
+        resultEt.setText(operand1.toString())
+        newNumberEt.setText("")
     }
 }
