@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/button_negative"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#818493"
+        android:text="Neg"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/button_divide"
+        app:layout_constraintTop_toTopOf="@+id/button_divide" />
+
     <EditText
         android:id="@+id/result_et"
         android:layout_width="wrap_content"
@@ -228,5 +240,6 @@
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/button_decimal"
         app:layout_constraintStart_toEndOf="@+id/button_decimal" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

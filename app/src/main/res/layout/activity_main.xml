@@ -6,11 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/button_negative"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#818493"
+        android:text="Neg"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_seven"
+        app:layout_constraintStart_toStartOf="@+id/button_seven" />
+
     <EditText
         android:id="@+id/result_et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:autofillHints=""
         android:ems="10"
         android:focusable="false"
@@ -52,8 +64,8 @@
 
     <Button
         android:id="@+id/button_zero"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#818493"
         android:text="0"
@@ -63,8 +75,8 @@
 
     <Button
         android:id="@+id/button_one"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#818493"
         android:text="1"
@@ -74,8 +86,8 @@
 
     <Button
         android:id="@+id/button_two"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="2"
@@ -85,8 +97,8 @@
 
     <Button
         android:id="@+id/button_three"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="3"
@@ -96,8 +108,8 @@
 
     <Button
         android:id="@+id/button_four"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#818493"
         android:text="4"
@@ -107,8 +119,8 @@
 
     <Button
         android:id="@+id/button_five"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="5"
@@ -118,8 +130,8 @@
 
     <Button
         android:id="@+id/button_six"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="6"
@@ -129,19 +141,20 @@
 
     <Button
         android:id="@+id/button_seven"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="136dp"
         android:backgroundTint="#818493"
         android:text="7"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/newNumber_et"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newNumber_et" />
 
     <Button
         android:id="@+id/button_eight"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="8"
@@ -151,8 +164,8 @@
 
     <Button
         android:id="@+id/button_nine"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="9"
@@ -162,8 +175,8 @@
 
     <Button
         android:id="@+id/button_divide"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="/"
@@ -173,8 +186,8 @@
 
     <Button
         android:id="@+id/button_multiply"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="*"
@@ -184,8 +197,8 @@
 
     <Button
         android:id="@+id/button_decimal"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="."
@@ -195,8 +208,8 @@
 
     <Button
         android:id="@+id/button_plus"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="+"
@@ -206,8 +219,8 @@
 
     <Button
         android:id="@+id/button_minus"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="-"
@@ -217,13 +230,20 @@
 
     <Button
         android:id="@+id/button_equals"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#818493"
         android:text="="
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/button_decimal"
         app:layout_constraintStart_toEndOf="@+id/button_decimal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="206dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
